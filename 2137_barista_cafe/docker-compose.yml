@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  barista:
+    build: .
+    ports: 
+      - 81:80
+    volumes:
+      - ~/2137_barista_cafe/:/var/www/html/
+volumes:
+  html:
