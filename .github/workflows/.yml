@@ -25,4 +25,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: pavansamu/sample_jenkins:$V{BUILD_NUMBER}
+          tags: pavansamu/sample_jenkins:latest
