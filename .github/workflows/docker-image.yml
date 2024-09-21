@@ -24,4 +24,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: pavansamu/sample_jenkins:$V{BUILD_NUMBER}
+          tags: pavansamu/sample_jenkins:latest
