@@ -35,3 +35,14 @@ jobs:
     # Push the Docker image to Docker Hub
     - name: Push Docker image
       run: docker push ${{ secrets.DOCKER_USERNAME }}/github:latest
+
+    - name: Load Docker image on remote server via SSH
+      uses: appleboy/ssh-action@v0.1.3
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        port: ${{ secrets.REMOTE_PORT }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          docker pull pavansamu/github:latest
+          docker run -d --name barista -p 80:80 pavansamu/github:latest
