@@ -54,5 +54,5 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: ${{ secrets.REMOTE_PORT }}
         script: |
-          ssh -v user@${{ secrets.REMOTE_HOST }}
+          ssh -v root@${{ secrets.REMOTE_HOST }}
 
