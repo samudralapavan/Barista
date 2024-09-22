@@ -27,8 +27,8 @@ jobs:
 
     # Build the Docker image
     - name: Build Docker image
-      run: docker build . -t ${{ secrets.DOCKER_USERNAME }}/sample_jenkins:latest
+      run: docker build . -t ${{ secrets.DOCKER_USERNAME }}/github:latest
 
     # Push the Docker image to Docker Hub
     - name: Push Docker image
-      run: docker push ${{ secrets.DOCKER_USERNAME }}/sample_jenkins:latest
+      run: docker push ${{ secrets.DOCKER_USERNAME }}/github:latest
